@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--DO IT-->
+        <!--MY VOCABULARY-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="TasksViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.82387644052505493" green="0.94537132978439331" blue="0.95848053693771362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="A3s-E7-0Fg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OB5-gG-Qpt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="A3s-E7-0Fg" secondAttribute="trailing" id="Tyf-Y1-SFv"/>
@@ -36,7 +36,7 @@
                             <constraint firstItem="A3s-E7-0Fg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uNO-Ot-ELx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DO IT" id="gnF-Uk-IHn">
+                    <navigationItem key="navigationItem" title="MY VOCABULARY" id="gnF-Uk-IHn">
                         <barButtonItem key="backBarButtonItem" title="Back" id="7Af-No-3Vg"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Yfl-Mv-jFc">
                             <connections>
@@ -73,28 +73,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60c-zQ-oWf">
-                                <rect key="frame" x="154" y="139" width="67" height="30"/>
-                                <state key="normal" title="Complete"/>
+                                <rect key="frame" x="152" y="139" width="71" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="LEARNED"/>
                                 <connections>
                                     <action selector="completeTapped:" destination="VYZ-JP-1og" eventType="touchUpInside" id="i7J-Rk-Z7g"/>
                                 </connections>
                             </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inW-gQ-2yc">
+                                <rect key="frame" x="16" y="209" width="343" height="453"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.82387644052505493" green="0.94537132978439331" blue="0.95848053693771362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="60c-zQ-oWf" firstAttribute="centerX" secondItem="rF0-z4-Dfu" secondAttribute="centerX" id="8Aa-yP-JvH"/>
+                            <constraint firstItem="IBE-Et-L8M" firstAttribute="top" secondItem="inW-gQ-2yc" secondAttribute="bottom" id="Ce5-hG-NoY"/>
+                            <constraint firstItem="inW-gQ-2yc" firstAttribute="top" secondItem="60c-zQ-oWf" secondAttribute="bottom" constant="60" id="DtI-W9-Eae"/>
                             <constraint firstItem="60c-zQ-oWf" firstAttribute="top" secondItem="q7T-J4-974" secondAttribute="bottom" constant="25" id="LVC-H1-Nme"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="inW-gQ-2yc" secondAttribute="trailing" id="NGw-Vl-96W"/>
+                            <constraint firstItem="inW-gQ-2yc" firstAttribute="top" secondItem="60c-zQ-oWf" secondAttribute="bottom" constant="40" id="TIa-PA-tai"/>
+                            <constraint firstItem="inW-gQ-2yc" firstAttribute="leading" secondItem="rF0-z4-Dfu" secondAttribute="leadingMargin" id="TLa-Ns-h9z"/>
                             <constraint firstItem="q7T-J4-974" firstAttribute="centerX" secondItem="rF0-z4-Dfu" secondAttribute="centerX" id="XAk-al-7vp"/>
                             <constraint firstItem="q7T-J4-974" firstAttribute="top" secondItem="7mh-pK-RIS" secondAttribute="bottom" constant="20" id="bMs-9E-wxn"/>
+                            <constraint firstItem="IBE-Et-L8M" firstAttribute="top" secondItem="inW-gQ-2yc" secondAttribute="bottom" constant="5" id="gT7-Nj-85e"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="taskLabel" destination="q7T-J4-974" id="Wwl-PL-N35"/>
+                        <outlet property="webView" destination="inW-gQ-2yc" id="wvT-P4-qmy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yT-r2-3Of" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="1448"/>
+            <point key="canvasLocation" x="1068" y="1447.8260869565217"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="PiH-23-CLh">
@@ -108,8 +120,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BO-bP-7su">
-                                <rect key="frame" x="162.5" y="79" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER A WORD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BO-bP-7su">
+                                <rect key="frame" x="123" y="79" width="129" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -120,8 +132,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVZ-yV-eQs">
-                                <rect key="frame" x="145.5" y="180" width="84" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMPORTANT?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVZ-yV-eQs">
+                                <rect key="frame" x="135.5" y="180" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -130,14 +142,15 @@
                                 <rect key="frame" x="163" y="211" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1F-i0-3zS">
-                                <rect key="frame" x="171" y="301" width="32" height="30"/>
+                                <rect key="frame" x="170.5" y="301" width="33" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="ADD"/>
                                 <connections>
                                     <action selector="addTapped:" destination="iIL-NH-Z8L" eventType="touchUpInside" id="STf-dI-PMv"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.82387644052505493" green="0.94537132978439331" blue="0.95848053693771362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kVZ-yV-eQs" firstAttribute="centerX" secondItem="2ep-eK-4Xt" secondAttribute="centerX" id="1eb-Rq-j4g"/>
                             <constraint firstItem="klL-ho-9Md" firstAttribute="top" secondItem="kVZ-yV-eQs" secondAttribute="bottom" constant="10" id="2XI-DF-bGs"/>

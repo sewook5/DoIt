@@ -53,7 +53,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         performSegue(withIdentifier: "selectTaskSegue", sender: task)
     }
     
-    /*  //Replacable with the use of CoreData
+    /*  //Replaced with the use of CoreData
      func makeTasks() -> [Task] {
      let task1 = Task()
      task1.name = "Walk the dog"

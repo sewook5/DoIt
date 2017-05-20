@@ -27,6 +27,8 @@ class CompleteTaskViewController: UIViewController {
         
         navigationController!.popViewController(animated: true)
     }
+
+    @IBOutlet var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,9 @@ class CompleteTaskViewController: UIViewController {
         } else {
             taskLabel.text = task!.name!
         }
+        
+        let myUrl = URL(string: "https://www.urbandictionary.com/define.php?term=\(task!.name!)")!
+        let myUrlRequest = URLRequest(url: myUrl)
+        webView.loadRequest(myUrlRequest)
     }
-    
 }
